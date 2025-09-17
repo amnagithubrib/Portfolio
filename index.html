@@ -530,18 +530,33 @@
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
         
-        .project-img {
-            height: 200px;
-            overflow: hidden;
-            position: relative;
-        }
-        
-        .project-img img {
+.project-img {
+  width: 100%;
+  height: 250px; /* sab ke liye same fix height */
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* image crop ho sakti hai, but sab equal */
+}
+
+
+/* Large screen ke liye fix */
+@media (min-width: 1200px) {
+    .project-img img {
+        height: auto; /* image crop nahi hogi */
+        object-fit: contain; /* poora image visible */
+    }
+}
+
+        /* .project-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: var(--transition);
-        }
+        } */
         
         .project-card:hover .project-img img {
             transform: scale(1.05);
@@ -1128,7 +1143,7 @@
                         <h3>Color Picker</h3>
                         <p>A utility application for designers to select, save, and organize color palettes for their projects.</p>
                         <div class="project-links">
-                            <a href="https://github.com/amnagithubrib" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                            <a href="https://amnagithubrib.github.io/ColorPicker/" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1250,7 +1265,47 @@
                         </div>
                     </div>
                 </div>
+                  <div class="project-card" data-category="frontend">
+                    <div class="project-img">
+                        <img src="https://play-lh.googleusercontent.com/YKaHNLbDomHZcbVdGGpbEUJk67hBULS0K48QImqQFPxg-bI-wfaUqlDOW8mRkoYeBk0" alt="Quiz App">
+                        <span class="project-tag">Gaming</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>LUCKY SPIN</h3>
+                        <p>Spin the wheel and win exciting rewards! A fun and engaging landing page designed for promotions and advertisements.</p>
+                        <div class="project-links">
+                            <a href="https://devedenspell.com/MD/AS/spin-AU/" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
                 
+                <div class="project-card" data-category="frontend">
+                    <div class="project-img">
+                        <img src="https://img.favpng.com/18/0/23/lunime-gacha-world-gacha-studio-anime-dress-up-character-album-png-favpng-iNJ8sWyFxwwHfWpWx5eWwmPmL.jpg" alt="Quiz App">
+                        <span class="project-tag">Gaming</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>LUCKY SPIN</h3>
+                        <p>Spin the wheel and win exciting rewards! A fun and engaging landing page designed for promotions and advertisements.</p>
+                        <div class="project-links">
+                            <a href="https://devedenspell.com/MD/AS/trino-updated-1/" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                                <div class="project-card" data-category="frontend">
+                    <div class="project-img">
+                        <img src="https://thumbs.dreamstime.com/b/wheel-fortunel-vector-illustration-20514959.jpg" alt="Quiz App">
+                        <span class="project-tag">Gaming</span>
+                    </div>
+                    <div class="project-info">
+                        <h3>LUCKY SPIN</h3>
+                        <p>Spin the wheel and win exciting rewards! A fun and engaging landing page designed for promotions and advertisements.</p>
+                        <div class="project-links">
+                            <a href="https://devedenspell.com/MD/AS/LuckySpin-UK/#" class="project-link">View on GitHub <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
                 <div class="project-card" data-category="frontend">
                     <div class="project-img">
                         <img src="https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="Quiz App">
